@@ -11,5 +11,8 @@ export const FormContainer = styled.div`
     }
     label {
         padding : 1% 0;
+        color: #a0122c;
+        font-weight: bold;
+
     }
 `;

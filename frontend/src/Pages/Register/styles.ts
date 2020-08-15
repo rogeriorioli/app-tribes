@@ -17,4 +17,11 @@ export const Container = styled.div<Bgprops>`
     .form-register {
         width : 70%;
     }
+    .link {
+        padding : 5% 0;
+        color :white;
+        a {
+            color : white;
+        }
+    }
 `;

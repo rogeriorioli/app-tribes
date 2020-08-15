@@ -17,7 +17,19 @@ const GlobalStyle = createGlobalStyle`
         background: #f0f0f5;
         -webkit-font-smoothing : antialeased;
     }
-
+    .default-button {
+        width: 100%;
+        background : orange;
+        color : white;
+        padding : 5%;
+        border : none;
+        border-radius : 10px;
+        margin : 2% 0;
+        text-transform: uppercase;
+        &-login {
+            background : #84bf67;
+        }
+    }
 `
 
 
