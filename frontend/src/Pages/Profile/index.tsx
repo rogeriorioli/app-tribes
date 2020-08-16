@@ -50,7 +50,7 @@ const Profile: React.FC = () => {
                 }
             })
             .then(success => {
-                console.log(success)
+
                 setGetUserPost(getUserPost.filter(getUserPost => getUserPost.id !== id))
             })
         }
@@ -58,6 +58,7 @@ const Profile: React.FC = () => {
       <Container>
           {getUser.map(user => <UserProfile key={user.name} name={user.name} avatar={user.avatar} bio={user.bio} /> )}
           <h2>Postagens Recentes</h2>
+          {getUserPost.length <= 0 && <h2>Silencio é ouro </h2> }
           {getUserPost.map(post => {
               return(
                 <Card key={post.id} 

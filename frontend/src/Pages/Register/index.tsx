@@ -26,19 +26,18 @@ const Register: React.FC<Bgprops> = () => {
                 name : name,
                 password: password, 
                 email : email,
-                bio : '',
+                bio : 'Fica de motivação para quem quiser inserir o texto da bio ',
                 avatar : avatar
             }).then(success => {
-                console.log(success)
+        
                 setMessage('UAU ! SEU CADASTRO FOI REALIZADO');
                 history.push(`/login`);
                 
             })
               .catch(err => {
                 setMessage(err.response.data.err === undefined ? 'error' : err.response.data.err );
-                console.log(message)
+        
                 setSignTrust(true)
-                console.log(signTrust);
               })  
          } 
 

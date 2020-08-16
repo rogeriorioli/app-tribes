@@ -20,10 +20,11 @@ const Feed: React.FC = () => {
             })
         },[token])
         
-        console.log(posts)
+
 
   return(
        <Container>
+      {posts.length <= 0 && <h2>Silencio é ouro </h2> }
        {posts.map((post) => {
            return(
                <Card key={post.id} 

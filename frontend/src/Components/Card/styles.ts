@@ -25,7 +25,7 @@ export const CardContainer = styled.div`
             } 
             button {
                 position: relative;
-                left: 69%;
+                left: 45%;
                 border: none;
                 background: none;
             }   
@@ -47,6 +47,8 @@ export const CardContainer = styled.div`
         h2 {
             color: rgb(23, 43, 77);
             margin-top: 10px;
+            padding : 0;
+            text-align: left;
         }
         small {
             color :#737373;

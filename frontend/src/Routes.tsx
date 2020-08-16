@@ -5,6 +5,7 @@ import Feed from './Pages/Feed';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Profile from './Pages/Profile';
+import NewPost from './Pages/NewPost';
 
 
 
@@ -21,6 +22,7 @@ const Routes: React.FC = () => {
             <Layouts>
             <Route path="/feed" component={Feed} />
             <Route path="/profile/:id" component={Profile} />
+            <Route path="/newpost" component={NewPost} />
             </Layouts>
           </Switch>
       </BrowserRouter>
