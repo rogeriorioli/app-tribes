@@ -6,7 +6,7 @@ export const ModalContainer = styled.div`
     align-items : center;
     justify-content : center;
     width : 100vw;
-    height : 100vh;
+    height : 100%;
     position : fixed;
     top: 0;
     z-index : 9;
@@ -22,5 +22,13 @@ export const ModalContainer = styled.div`
       font-weight : bold; 
       width : 70vw;
       min-height : 50vh;
+      flex-wrap : wrap;
+      p{
+          width : 100%;
+          margin : 1% 0;
+      }
+      button {
+          width : 80%;
+      }
     }
 `;

@@ -3,6 +3,12 @@ import {createGlobalStyle} from 'styled-components'
 
 
 const GlobalStyle = createGlobalStyle`
+
+    #root .inner {
+        width : 380px;
+        height : 667px;
+        margin : auto;
+    }
     *{
         margin:  0;
         padding:  0;

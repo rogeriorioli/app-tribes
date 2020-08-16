@@ -16,6 +16,7 @@ export default class PostController {
         
         const posts = await db('posts')
         .select('*')
+        .orderBy('id', 'desc')
 
         return res.json(posts)
     }
@@ -31,6 +32,7 @@ export default class PostController {
         const posts = await db('posts')
         .where('token', token)
         .select('*')
+        .orderBy('id', 'desc')
 
         return res.json(posts)
     }

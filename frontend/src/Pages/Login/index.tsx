@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link , useHistory} from 'react-router-dom'
 import api from '../../Services/api';
 
@@ -15,7 +15,14 @@ const Login: React.FC<Bgprops> = () => {
     const [signTrust , setSignTrust] = useState<boolean>(false);
     const [message , setMessage] = useState<string>('');
 
+    const [token , setToken] = useState<string>('');
     const history = useHistory();
+
+
+        useEffect(() => {
+          if(!window.sessionStorage.getItem('token'))
+             window.sessionStorage.setItem('token', token)
+        })
 
          const sendFormLead = async (e : any) => {
            e.preventDefault(); 
@@ -24,16 +31,15 @@ const Login: React.FC<Bgprops> = () => {
                 email : email
             
             }).then(success => {
-                console.log(success)
+                setToken(success.data.token)
+                window.sessionStorage.setItem('token', token)
                 setMessage('UAU ! SEU CADASTRO FOI REALIZADO');
                 history.push(`/feed`);
                 
             })
               .catch(err => {
                 setMessage(err.response.data.err);
-                console.log(message)
                 setSignTrust(true)
-                console.log(signTrust);
               })  
          } 
 

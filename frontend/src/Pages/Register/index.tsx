@@ -35,7 +35,7 @@ const Register: React.FC<Bgprops> = () => {
                 
             })
               .catch(err => {
-                setMessage(err.response.data.err);
+                setMessage(err.response.data.err === undefined ? 'error' : err.response.data.err );
                 console.log(message)
                 setSignTrust(true)
                 console.log(signTrust);
@@ -44,6 +44,7 @@ const Register: React.FC<Bgprops> = () => {
 
          const closeModal = () => {
             setSignTrust(false)
+            history.push('/login')
          }
 
   return (
@@ -63,7 +64,7 @@ const Register: React.FC<Bgprops> = () => {
     </Container>
     {signTrust !== false ? 
         <Modal message={message}>
-            <button className="default-button" type="button" onClick={closeModal}>Tentar Novamente</button>
+            <button className="default-button" type="button" onClick={closeModal}>Fazer login</button>
         </Modal>
         : <></>
       }

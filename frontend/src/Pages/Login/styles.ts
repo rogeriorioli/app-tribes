@@ -7,20 +7,20 @@ export interface Bgprops {
 export const Container = styled.div<Bgprops>`
     background : url(${props => props.background});
     height : 100vh;
-    width : 100vw;
+    width : 100%;
     background-size : cover;
     background-position : top left;
     display : flex;
     align-items: center;
     justify-content: center;
     flex-wrap : wrap;
+    position : relative;
     &:before {
         background : rgba(0,0,0,.6);
         position : fixed;
         height : 100vh;
-        width : 100vw;
+        width: 400px;
         top : 0;
-        left : 0;
         content : '';
     }
     img {

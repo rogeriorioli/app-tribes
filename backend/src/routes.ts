@@ -21,6 +21,9 @@ routes.post('/addpost', classPostController.create);
 routes.put('/editpost/:id', classPostController.update);
 routes.delete('/deletepost/:id', classPostController.delete);
 
+routes.get('/user/:id', classUserController.singleUser)
+
+routes.put('/user/:id', classUserController.update)
 
 routes.get('/posts', classPostController.index)
 routes.get('/post/:id', classPostController.single)
