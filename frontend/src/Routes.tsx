@@ -16,7 +16,7 @@ const Routes: React.FC = () => {
   return(
         <BrowserRouter>
           <Switch>
-            <Route path="/" exact component={Login}   /> 
+            <Route path="/" exact component={Register}   /> 
             <Route path="/register"  component={Register}/>  
             <Route path="/login"  component={Login}   /> 
             <Layouts>

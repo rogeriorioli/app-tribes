@@ -21,13 +21,14 @@ export const ModalContainer = styled.div`
       color : white;
       font-weight : bold; 
       width : 70%;
-      min-height : 50vh;
+      padding : 5%;
+      height : auto;
       flex-wrap : wrap;
       p{
           width : 100%;
-          margin : 1% 0;
+          margin : 5% 0;
       }
-      a {
+      a, button {
           width : 80%;
           text-decoration : none;
       }
