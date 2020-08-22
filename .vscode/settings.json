@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "${workspaceFolder:teste-app-tribes}/backend/src/database/database.sqlite",
+            "driver": "SQLite",
+            "group": "posts",
+            "name": "posts",
+            "previewLimit": 50
+        },
+        {
+            "database": "${workspaceFolder:teste-app-tribes}/backend/src/database/database.sqlite",
+            "driver": "SQLite",
+            "name": "posts",
+            "previewLimit": 50
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

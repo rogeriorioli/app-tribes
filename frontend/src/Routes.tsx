@@ -20,9 +20,9 @@ const Routes: React.FC = () => {
             <Route path="/register"  component={Register}/>  
             <Route path="/login"  component={Login}   /> 
             <Layouts>
-            <Route path="/feed" component={Feed} />
-            <Route path="/profile/:id" component={Profile} />
-            <Route path="/newpost" component={NewPost} />
+              <Route path="/feed" component={Feed} />
+              <Route path="/profile/:id" component={Profile} />
+              <Route path="/newpost" component={NewPost} />
             </Layouts>
           </Switch>
       </BrowserRouter>
